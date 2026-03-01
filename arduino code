@@ -1,0 +1,28 @@
+int devicePin = 8;
+String command = "";
+
+void setup() {
+  pinMode(devicePin, OUTPUT);
+  Serial.begin(9600);
+  Serial.println("Speech Control Ready");
+  Serial.println("Type ON or OFF and press Enter");
+}
+
+void loop() {
+  if (Serial.available()) {
+    command = Serial.readStringUntil('\n');
+    command.trim();   // remove spaces and newline
+
+    if (command == "ON") {
+      digitalWrite(devicePin, HIGH);
+      Serial.println("Device ON");
+    }
+    else if (command == "OFF") {
+      digitalWrite(devicePin, LOW);
+      Serial.println("Device OFF");
+    }
+    else {
+      Serial.println("Wrong Command");
+    }
+  }
+}
