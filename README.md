@@ -47,5 +47,6 @@ Home automation provides independence to individuals with mobility challenges.
 They can control appliances without physically reaching switches.
 
 OUTPUT
+<img width="1812" height="772" alt="Image" src="https://github.com/user-attachments/assets/7ccd36e9-3401-41c9-bb94-8766eadb6d50" />
 
 
